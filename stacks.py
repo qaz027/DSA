@@ -7,3 +7,47 @@ class Stack:
 
     def size(self):
         return len(self.items)
+
+
+class Stack_expanded:
+    def __init__(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def size(self):
+        return len(self.items)
+
+    def peek(self):
+        if not self.items:
+            return None
+        return self.items[-1]
+
+    def pop(self):
+        if not self.items:
+            return None
+        return self.items.pop(-1)
+
+
+class Stack_bootDev_solution:
+    def __init__(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def size(self):
+        return len(self.items)
+
+    def peek(self):
+        if len(self.items) == 0:
+            return None
+        return self.items[-1]
+
+    def pop(self):
+        if len(self.items) == 0:
+            return None
+        item = self.items[-1]
+        del self.items[-1]
+        return item
