@@ -18,7 +18,7 @@ class LinkedList:
         if not self.head:
             self.head = node
         else:
-            last = None
+            last = self.head # was previously last = None
             for nodes in self.__iter__():
                 last = nodes
             last.next = node
